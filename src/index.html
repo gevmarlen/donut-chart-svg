@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Donut chart SVG</title>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 60 60">
+      <g>
+        <text x="50" y="30">svg</text>
+        <circle
+          class="svg-inline"
+          cx="30"
+          cy="30"
+          r="10"
+          fill="transparent"
+          stroke="#36a2eb"
+          stroke-width="15"
+          stroke-dasharray="calc(2 * 3.141 * 10 / (100 / 50)) calc(2 * 3.141 * 10 / (100 / 50))"
+          stroke-dashoffset="calc(2 * 3.141 * 10 / (100 / 25))"
+        >
+          <animate fill="freeze" dur="0.1s" to="17" from="15" attributeName="stroke-width" begin="mouseover" />
+          <animate fill="freeze" dur="0.1s" to="15" from="17" attributeName="stroke-width" begin="mouseout" />
+          <animate fill="freeze" dur="0.1s" to="#47b3fc" from="#36a2eb" attributeName="stroke" begin="mouseover" />
+          <animate fill="freeze" dur="0.1s" to="#36a2eb" from="#47b3fc" attributeName="stroke" begin="mouseout" />
+        </circle>
+      </g>
+      <g>
+        <text x="15" y="50">css</text>
+        <circle class="svg-css" cx="30" cy="30" r="10"></circle>
+      </g>
+      <g>
+        <text x="15" y="15">js</text>
+        <circle class="svg-js" cx="30" cy="30" r="10"></circle>
+      </g>
+      <circle cx="30" cy="30" r="10" fill="#fff"></circle>
+    </svg>
+  </body>
+</html>

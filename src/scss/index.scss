@@ -1,0 +1,18 @@
+.svg-css {
+  transition: transform 0.1s;
+  fill: transparent;
+  stroke: #ff9f40;
+  stroke-width: 15;
+  /* 2πr / (100% / x%) 2πr / (100% / (100 - x)%) */
+  stroke-dasharray: calc(2 * 3.141 * 10 / (100 / 20)) calc(2 * 3.141 * 10 / (100 / 80));
+  /* 25%(начальное смещение) - (x0 + x1 + xn)% */
+  stroke-dashoffset: calc(2 * 3.141 * 10 / (100 / 25) - (2 * 3.141 * 10 / (100 / 50)));
+
+  &:hover {
+    transform: translate(-2px, 2px);
+  }
+}
+
+svg text {
+  font: 4px sans-serif;
+}
